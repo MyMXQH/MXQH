@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10800F82-F219-49A0-B31D-DFAB390A1D33}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MXQH</RootNamespace>
+    <AssemblyName>MXQH</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="api\login" />
+    <Content Include="api\signup" />
+    <Content Include="Basic\app.html" />
+    <Content Include="Basic\apps_contact.html" />
+    <Content Include="Basic\apps_note.html" />
+    <Content Include="Basic\apps_weather.html" />
+    <Content Include="Basic\app_calendar.html" />
+    <Content Include="Basic\app_dashboard_v1.html" />
+    <Content Include="Basic\app_dashboard_v2.html" />
+    <Content Include="Basic\blank.html" />
+    <Content Include="Basic\blocks\aside.html" />
+    <Content Include="Basic\blocks\aside.music.html" />
+    <Content Include="Basic\blocks\header.html" />
+    <Content Include="Basic\blocks\header.music.html" />
+    <Content Include="Basic\blocks\nav.html" />
+    <Content Include="Basic\blocks\page_footer.html" />
+    <Content Include="Basic\blocks\settings.html" />
+    <Content Include="Basic\docs.html" />
+    <Content Include="Basic\layout.html" />
+    <Content Include="Content\angular-busy.css" />
+    <Content Include="Content\angular-busy.min.css" />
+    <Content Include="Content\angular-toastr.css" />
+    <Content Include="Content\angular-toastr.min.css" />
+    <Content Include="Content\angular-toggle-switch\angular-toggle-switch.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-switch\bootstrap-switch.css" />
+    <Content Include="Content\bootstrap-switch\bootstrap-switch.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Css\demo.css" />
+    <Content Include="Content\Css\font-awesome.css" />
+    <Content Include="Content\Css\Main.css" />
+    <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\images\bg.jpg" />
+    <Content Include="Content\images\bg2.jpg" />
+    <Content Include="Content\images\bg3.jpg" />
+    <Content Include="Content\images\blurred.jpg" />
+    <Content Include="Content\images\noise.png" />
+    <Content Include="Content\images\wood_pattern.jpg" />
+    <Content Include="Content\select.css" />
+    <Content Include="Content\select.min.css" />
+    <Content Include="Content\select2-bootstrap.css" />
+    <Content Include="Content\select2.css" />
+    <Content Include="Content\sweetalert.css" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
+    <Content Include="Content\ui-grid.css" />
+    <Content Include="Content\ui-grid.min.css" />
+    <Content Include="Content\ui-grid.svg" />
+    <Content Include="css\less\app.arrow.less" />
+    <Content Include="css\less\app.butterbar.less" />
+    <Content Include="css\less\app.buttons.less" />
+    <Content Include="css\less\app.colors.less" />
+    <Content Include="css\less\app.components.less" />
+    <Content Include="css\less\app.item.less" />
+    <Content Include="css\less\app.layout.boxed.less" />
+    <Content Include="css\less\app.layout.less" />
+    <Content Include="css\less\app.less" />
+    <Content Include="css\less\app.mixins.less" />
+    <Content Include="css\less\app.nav.dock.less" />
+    <Content Include="css\less\app.nav.less" />
+    <Content Include="css\less\app.nav.offscreen.less" />
+    <Content Include="css\less\app.ng.less" />
+    <Content Include="css\less\app.plugin.less" />
+    <Content Include="css\less\app.reset.less" />
+    <Content Include="css\less\app.utilities.less" />
+    <Content Include="css\less\app.variables.less" />
+    <Content Include="css\less\app.widgets.less" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\Simple-Line-Icons.eot" />
+    <Content Include="fonts\Simple-Line-Icons.ttf" />
+    <Content Include="fonts\Simple-Line-Icons.woff" />
+    <Content Include="fonts\sourcesanspro\sourcesanspro-bold.woff" />
+    <Content Include="fonts\sourcesanspro\sourcesanspro-light.woff" />
+    <Content Include="fonts\sourcesanspro\sourcesanspro.woff" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\progressbar.gif" />
+    <Content Include="Images\select2-spinner.gif" />
+    <Content Include="Images\select2.png" />
+    <Content Include="js\appData.js" />
+    <Content Include="js\app\contact\contacts.json" />
+    <Content Include="js\app\mail\mails.json" />
+    <Content Include="js\app\note\notes.json" />
+    <Content Include="js\controllers\bootstrap.js" />
+    <Content Include="js\controllers\chart.js" />
+    <Content Include="js\Dialog.js" />
+    <Content Include="js\directives\app-Directive.js" />
+    <Content Include="js\filters\app-filter.js" />
+    <Content Include="js\Router.js" />
+    <Content Include="js\services\AjaxServiceMethod.js" />
+    <Content Include="js\services\AjaxServiceModule.js" />
+    <Content Include="l10n\cn.js" />
+    <Content Include="Loading\finalfantasy.gif" />
+    <Content Include="Loading\index.circle-slack-loading-icon.gif" />
+    <Content Include="Loading\lg.ajax-spinner-preloader.gif" />
+    <Content Include="Loading\lg.circle-slack-loading-icon.gif" />
+    <Content Include="Loading\Loading.html" />
+    <Content Include="login.html" />
+    <Content Include="Login.js" />
+    <Content Include="MESFun\BindingCode.html" />
+    <Content Include="MESFun\BindingCode.js" />
+    <Content Include="MESFun\GenerateSn.html" />
+    <Content Include="MESFun\GenerateSn.js" />
+    <Content Include="Scripts\angular-ui\angular-toggle-switch.js" />
+    <Content Include="Scripts\angular-ui\bootstrap-switch.js" />
+    <Content Include="Scripts\angular-ui\bootstrap-switch.min.js" />
+    <Content Include="Scripts\angular\angular-busy.js" />
+    <Content Include="Scripts\angular\angular-busy.min.js" />
+    <Content Include="Scripts\angular\angular-messages.js" />
+    <Content Include="Scripts\angular\angular-messages.min.js" />
+    <Content Include="Scripts\angular\angular-toastr.js" />
+    <Content Include="Scripts\angular\angular-toastr.min.js" />
+    <Content Include="Scripts\angular\angular-toastr.tpls.js" />
+    <Content Include="Scripts\angular\angular-toastr.tpls.min.js" />
+    <Content Include="Scripts\angular\angular-translate.js" />
+    <Content Include="Scripts\angular\angular-translate.min.js" />
+    <Content Include="Scripts\angular\angular-ui-router.js" />
+    <Content Include="Scripts\angular\angular-ui-router.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
+    <Content Include="Scripts\angular\angular-animate\angular-animate.js" />
+    <Content Include="Scripts\angular\angular-animate\angular-animate.min.js" />
+    <Content Include="Scripts\angular\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular\angular-cookies\angular-cookies.js" />
+    <Content Include="Scripts\angular\angular-cookies\angular-cookies.min.js" />
+    <Content Include="Scripts\angular\angular-resource\angular-resource.js" />
+    <Content Include="Scripts\angular\angular-resource\angular-resource.min.js" />
+    <Content Include="Scripts\angular\angular-sanitize\angular-sanitize.js" />
+    <Content Include="Scripts\angular\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="Scripts\angular\angular-touch\angular-touch.js" />
+    <Content Include="Scripts\angular\angular-translate\angular-translate.js" />
+    <Content Include="Scripts\angular\angular-translate\angular-translate.min.js" />
+    <Content Include="Scripts\angular\angular-translate\loader-static-files.js" />
+    <Content Include="Scripts\angular\angular-translate\storage-cookie.js" />
+    <Content Include="Scripts\angular\angular-translate\storage-local.js" />
+    <Content Include="Scripts\angular\angular-ui-router\angular-ui-router.js" />
+    <Content Include="Scripts\angular\angular-ui-utils\ui-utils.js" />
+    <Content Include="Scripts\angular\angular.js" />
+    <Content Include="Scripts\angular\angular.min.js" />
+    <Content Include="Scripts\angular\ngstorage\ngStorage.js" />
+    <Content Include="Scripts\angular\oclazyload\ocLazyLoad.js" />
+    <Content Include="Scripts\angular\ui-router-require-polyfill.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\angular\angular-messages.min.js.map" />
+    <Content Include="Data\Icon.json" />
+    <Content Include="Data\Color.json" />
+    <Content Include="Data\Handler\FileData.ashx" />
+    <Content Include="Scripts\angular\angular-animate\angular-animate.min.js.map" />
+    <Content Include="Scripts\angular\angular-cookies\angular-cookies.min.js.map" />
+    <Content Include="Scripts\angular\angular-resource\angular-resource.min.js.map" />
+    <Content Include="Scripts\angular\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="Content\angular-toggle-switch\angular-toggle-switch.less" />
+    <Content Include="Content\angular-toggle-switch\mixins.less" />
+    <Content Include="Content\angular-toggle-switch\toggle-switch.less" />
+    <Content Include="Content\angular-toggle-switch\variables.less" />
+    <Content Include="Content\font\fontawesome-webfont.eot" />
+    <Content Include="Content\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\font\fontawesome-webfont.woff" />
+    <None Include="Properties\PublishProfiles\2.pubxml" />
+    <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\jquery\bootstrap.js" />
+    <Content Include="Scripts\jquery\charts\easypiechart\jquery.easy-pie-chart.js" />
+    <Content Include="Scripts\jquery\charts\flot\jquery.flot.min.js" />
+    <Content Include="Scripts\jquery\charts\flot\jquery.flot.orderBars.js" />
+    <Content Include="Scripts\jquery\charts\flot\jquery.flot.pie.min.js" />
+    <Content Include="Scripts\jquery\charts\flot\jquery.flot.resize.js" />
+    <Content Include="Scripts\jquery\charts\flot\jquery.flot.spline.js" />
+    <Content Include="Scripts\jquery\charts\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Scripts\jquery\charts\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Scripts\jquery\chosen\chosen-sprite%402x.png" />
+    <Content Include="Scripts\jquery\chosen\chosen-sprite.png" />
+    <Content Include="Scripts\jquery\chosen\chosen.css" />
+    <Content Include="Scripts\jquery\chosen\chosen.jquery.min.js" />
+    <Content Include="Scripts\jquery\datatables\dataTables.bootstrap.css" />
+    <Content Include="Scripts\jquery\datatables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\jquery\datatables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery\file\bootstrap-filestyle.min.js" />
+    <Content Include="Scripts\jquery\footable\fonts\footable.svg" />
+    <Content Include="Scripts\jquery\footable\footable.all.min.js" />
+    <Content Include="Scripts\jquery\footable\footable.core.css" />
+    <Content Include="Scripts\jquery\fullcalendar\fullcalendar.css" />
+    <Content Include="Scripts\jquery\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Scripts\jquery\fullcalendar\theme.css" />
+    <Content Include="Scripts\jquery\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\jquery\jquery.min.js" />
+    <Content Include="Scripts\jquery\jquery.ui.touch-punch.min.js" />
+    <Content Include="Scripts\jquery\jvectormap\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="Scripts\jquery\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Scripts\jquery\jvectormap\jquery-jvectormap.css" />
+    <Content Include="Scripts\jquery\jvectormap\jquery-jvectormap.min.js" />
+    <Content Include="Scripts\jquery\nestable\jquery.nestable.js" />
+    <Content Include="Scripts\jquery\nestable\nestable.css" />
+    <Content Include="Scripts\jquery\select2\select2-bootstrap.css" />
+    <Content Include="Scripts\jquery\select2\select2-spinner.gif" />
+    <Content Include="Scripts\jquery\select2\select2.css" />
+    <Content Include="Scripts\jquery\select2\select2.min.js" />
+    <Content Include="Scripts\jquery\select2\select2.png" />
+    <Content Include="Scripts\jquery\select2\select2x2.png" />
+    <Content Include="Scripts\jquery\slider\bootstrap-slider.js" />
+    <Content Include="Scripts\jquery\slider\slider.css" />
+    <Content Include="Scripts\jquery\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Scripts\jquery\sortable\jquery.sortable.js" />
+    <Content Include="Scripts\jquery\spinner\jquery.bootstrap-touchspin.css" />
+    <Content Include="Scripts\jquery\spinner\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="Scripts\jquery\wysiwyg\bootstrap-wysiwyg.js" />
+    <Content Include="Scripts\jquery\wysiwyg\jquery.hotkeys.js" />
+    <Content Include="Scripts\libs\moment.min.js" />
+    <Content Include="Scripts\libs\screenfull.min.js" />
+    <Content Include="Scripts\modules\angular-bootstrap-nav-tree\abn_tree.css" />
+    <Content Include="Scripts\modules\angular-bootstrap-nav-tree\abn_tree_directive.js" />
+    <Content Include="Scripts\modules\angular-file-upload\angular-file-upload.min.js" />
+    <Content Include="Scripts\modules\angular-slider\angular-slider.css" />
+    <Content Include="Scripts\modules\angular-slider\angular-slider.min.js" />
+    <Content Include="Scripts\modules\angular-ui-calendar\calendar.js" />
+    <Content Include="Scripts\modules\angular-ui-select\select.min.css" />
+    <Content Include="Scripts\modules\angular-ui-select\select.min.js" />
+    <Content Include="Scripts\modules\angularjs-toaster\toaster.css" />
+    <Content Include="Scripts\modules\angularjs-toaster\toaster.js" />
+    <Content Include="Scripts\modules\ng-grid\ng-grid.min.css" />
+    <Content Include="Scripts\modules\ng-grid\ng-grid.min.js" />
+    <Content Include="Scripts\modules\ng-grid\theme.css" />
+    <Content Include="Scripts\modules\ngImgCrop\ng-img-crop.css" />
+    <Content Include="Scripts\modules\ngImgCrop\ng-img-crop.js" />
+    <Content Include="Scripts\modules\textAngular\textAngular-sanitize.min.js" />
+    <Content Include="Scripts\modules\textAngular\textAngular.min.js" />
+    <Content Include="Scripts\modules\videogular\plugins\buffering.min.js" />
+    <Content Include="Scripts\modules\videogular\plugins\controls.min.js" />
+    <Content Include="Scripts\modules\videogular\plugins\ima-ads.min.js" />
+    <Content Include="Scripts\modules\videogular\plugins\overlay-play.min.js" />
+    <Content Include="Scripts\modules\videogular\plugins\poster.min.js" />
+    <Content Include="Scripts\modules\videogular\videogular.min.js" />
+    <Content Include="Scripts\angular\ngDraggable.js" />
+    <Content Include="Scripts\oclazyload\ocLazyLoad.js" />
+    <Content Include="Scripts\oclazyload\ocLazyLoad.min.js" />
+    <Content Include="Scripts\oclazyload\ocLazyLoad.require.js" />
+    <Content Include="Scripts\oclazyload\ocLazyLoad.require.min.js" />
+    <Content Include="Scripts\oclazyload\ui-router-require-polyfill.js" />
+    <Content Include="Scripts\select.js" />
+    <Content Include="Scripts\select.min.js" />
+    <Content Include="Scripts\sweetalert.min.js" />
+    <Content Include="Scripts\ui-grid.js" />
+    <Content Include="Scripts\ui-grid.min.js" />
+    <Content Include="Scripts\ui-select2-angular.js" />
+    <Content Include="Scripts\ui-select2-jquery.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="SystemFun\AddDialog.js" />
+    <Content Include="SystemFun\AddDialog.html" />
+    <Content Include="SystemFun\CreateEntity.html" />
+    <Content Include="SystemFun\CreateEntity.js" />
+    <Content Include="SystemFun\DialogDialog.html" />
+    <Content Include="SystemFun\DialogDialog.js" />
+    <Content Include="SystemFun\IconDialog.html" />
+    <Content Include="SystemFun\IconDialog.js" />
+    <Content Include="SystemFun\RoleDailog.html" />
+    <Content Include="SystemFun\RoleDailog.js" />
+    <Content Include="SystemFun\SysFunction.html" />
+    <Content Include="SystemFun\SysFunction.js" />
+    <Content Include="SystemFun\SystemDialog.html" />
+    <Content Include="SystemFun\SystemDialog.js" />
+    <Content Include="SystemFun\System.html" />
+    <Content Include="SystemFun\System.js" />
+    <Content Include="Content\ui-grid.woff" />
+    <Content Include="Content\ui-grid.ttf" />
+    <Content Include="Content\ui-grid.eot" />
+    <Content Include="Content\less\variables.less" />
+    <Content Include="Content\less\validate\less\validate.less" />
+    <Content Include="Content\less\tree-view\less\tree-view.less" />
+    <Content Include="Content\less\tree-base\less\tree-base.less" />
+    <Content Include="Content\less\sorting.less" />
+    <Content Include="Content\less\selection\less\selection.less" />
+    <Content Include="Content\less\rtl.less" />
+    <Content Include="Content\less\row-edit\less\rowEdit.less" />
+    <Content Include="Content\less\resize-columns\less\column-resizer.less" />
+    <Content Include="Content\less\pinning\less\pinning.less" />
+    <Content Include="Content\less\pagination\less\pagination.less" />
+    <Content Include="Content\less\move-columns\less\colMovable.less" />
+    <Content Include="Content\less\menu.less" />
+    <Content Include="Content\less\main.less" />
+    <Content Include="Content\less\importer\less\importer.less" />
+    <Content Include="Content\less\icons.less" />
+    <Content Include="Content\less\header.less" />
+    <Content Include="Content\less\grouping\less\grouping.less" />
+    <Content Include="Content\less\grid.less" />
+    <Content Include="Content\less\footer.less" />
+    <Content Include="Content\less\exporter\less\exporter.less" />
+    <Content Include="Content\less\expandable\less\expandable.less" />
+    <Content Include="Content\less\empty-base-layer\less\emptyBaseLayer.less" />
+    <Content Include="Content\less\elements.less" />
+    <Content Include="Content\less\edit\less\edit.less" />
+    <Content Include="Content\less\cellnav\less\cellNav.less" />
+    <Content Include="Content\less\cell.less" />
+    <Content Include="Content\less\bootstrap\bootstrap.less" />
+    <Content Include="Content\less\body.less" />
+    <Content Include="Content\less\animation.less" />
+    <Content Include="packages.config" />
+    <Content Include="Data\Dialog.json" />
+    <Content Include="Scripts\select.min.js.map" />
+    <Content Include="Content\select.min.css.map" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\jquery\datatables\datatable.json" />
+    <Content Include="Scripts\jquery\footable\fonts\footable.eot" />
+    <Content Include="Scripts\jquery\footable\fonts\footable.ttf" />
+    <Content Include="Scripts\jquery\footable\fonts\footable.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\animate.css" />
+    <Content Include="css\app.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\font.css" />
+    <Content Include="css\simple-line-icons.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\Simple-Line-Icons.svg" />
+    <Content Include="img\a0.jpg" />
+    <Content Include="img\a1.jpg" />
+    <Content Include="img\a10.jpg" />
+    <Content Include="img\a2.jpg" />
+    <Content Include="img\a3.jpg" />
+    <Content Include="img\a4.jpg" />
+    <Content Include="img\a5.jpg" />
+    <Content Include="img\a6.jpg" />
+    <Content Include="img\a7.jpg" />
+    <Content Include="img\a8.jpg" />
+    <Content Include="img\a9.jpg" />
+    <Content Include="img\b0.jpg" />
+    <Content Include="img\b1.jpg" />
+    <Content Include="img\b10.jpg" />
+    <Content Include="img\b11.jpg" />
+    <Content Include="img\b12.jpg" />
+    <Content Include="img\b13.jpg" />
+    <Content Include="img\b14.jpg" />
+    <Content Include="img\b15.jpg" />
+    <Content Include="img\b16.jpg" />
+    <Content Include="img\b17.jpg" />
+    <Content Include="img\b18.jpg" />
+    <Content Include="img\b19.jpg" />
+    <Content Include="img\b2.jpg" />
+    <Content Include="img\b20.jpg" />
+    <Content Include="img\b3.jpg" />
+    <Content Include="img\b4.jpg" />
+    <Content Include="img\b5.jpg" />
+    <Content Include="img\b6.jpg" />
+    <Content Include="img\b7.jpg" />
+    <Content Include="img\b8.jpg" />
+    <Content Include="img\b9.jpg" />
+    <Content Include="img\bg.jpg" />
+    <Content Include="img\c0.jpg" />
+    <Content Include="img\c1.jpg" />
+    <Content Include="img\c2.jpg" />
+    <Content Include="img\c3.jpg" />
+    <Content Include="img\c4.jpg" />
+    <Content Include="img\c5.jpg" />
+    <Content Include="img\c6.jpg" />
+    <Content Include="img\c7.jpg" />
+    <Content Include="img\c8.jpg" />
+    <Content Include="img\c9.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\p0.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\app.js" />
+    <Content Include="js\app\calendar\calendar.js" />
+    <Content Include="js\app\contact\contact.js" />
+    <Content Include="js\app\mail\mail-service.js" />
+    <Content Include="js\app\mail\mail.js" />
+    <Content Include="js\app\map\load-google-maps.js" />
+    <Content Include="js\app\map\map.js" />
+    <Content Include="js\app\map\ui-map.js" />
+    <Content Include="js\app\music\ctrl.js" />
+    <Content Include="js\app\music\theme.css" />
+    <Content Include="js\app\music\videogular.css" />
+    <Content Include="js\app\note\note.js" />
+    <Content Include="js\app\weather\angular-skycons.js" />
+    <Content Include="js\app\weather\ctrl.js" />
+    <Content Include="js\app\weather\skycons.js" />
+    <Content Include="js\config.js" />
+    <Content Include="js\config.lazyload.js" />
+    <Content Include="js\config.router.js" />
+    <Content Include="js\directives\setnganimate.js" />
+    <Content Include="js\directives\ui-butterbar.js" />
+    <Content Include="js\directives\ui-focus.js" />
+    <Content Include="js\directives\ui-fullscreen.js" />
+    <Content Include="js\directives\ui-jq.js" />
+    <Content Include="js\directives\ui-module.js" />
+    <Content Include="js\directives\ui-nav.js" />
+    <Content Include="js\directives\ui-scroll.js" />
+    <Content Include="js\directives\ui-shift.js" />
+    <Content Include="js\directives\ui-toggleclass.js" />
+    <Content Include="js\directives\ui-validate.js" />
+    <Content Include="js\filters\fromNow.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\services\ui-load.js" />
+    <Content Include="l10n\de_DE.js" />
+    <Content Include="l10n\en.js" />
+    <Content Include="l10n\it_IT.js" />
+    <Content Include="SystemFun\SysUser.html" />
+    <Content Include="SystemFun\SysUser.js" />
+    <Content Include="SystemFun\UserDailog.html" />
+    <Content Include="SystemFun\UserDailog.js" />
+    <Content Include="SystemFun\UserRoleDailog.html" />
+    <Content Include="SystemFun\UserRoleDailog.js" />
+    <Content Include="Template\UIAccordionTemplate.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Handler\FileData.ashx.cs">
+      <DependentUpon>FileData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Handler\FileData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="js\controllers\uploads\" />
+    <Folder Include="src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>32241</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:31974/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
